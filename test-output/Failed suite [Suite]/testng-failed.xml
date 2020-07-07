@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test2(failed)(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="org.test3.Parallel">
+        <methods>
+          <include name="flipkart"/>
+          <include name="tc2"/>
+          <include name="tc2"/>
+          <include name="last"/>
+        </methods>
+      </class> <!-- org.test3.Parallel -->
+    </classes>
+  </test> <!-- Test2(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

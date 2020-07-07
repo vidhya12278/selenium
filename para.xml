@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+  <test name="Test">
+  <parameter name="brow" value="chrome"></parameter>
+  <groups>
+  <run>
+  <include name="bonding"/>
+  </run></groups>
+  <classes>
+ <class name="org.test3.Newpara"/>
+  </classes>
+  </test> 
+  
+  
+   <test name="Test1">
+  <parameter name="brow" value="ie"></parameter>
+ <groups>
+  <run>
+  <include name="bonding"/>
+  </run></groups>
+  <classes>
+  <class name="org.test3.Newpara"/>
+  </classes>
+  </test> 
+  
+  <test name="Test2">
+  <parameter name="brow" value="op"></parameter>
+  <groups>
+  <run>
+  <include name="bonding"/>
+  </run></groups>
+  <classes>
+ <class name="org.test3.Newpara"/>
+    </classes>
+  </test> 
+  
+ 
+  
+  
+</suite> 

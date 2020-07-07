@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  <parameter name="brow" value="op"></parameter>
+   <parameter name="search" value="redmi new design"></parameter>
+   <parameter name="web" value="element"></parameter>
+   <parameter name="str" value="color"></parameter>
+   <parameter name="sub" value="greens@gmail.com"></parameter>
+   
+   <groups>
+       <run>
+          <include name="bonding"/>
+       </run>
+  </groups>
+    <classes>
+         <class name="practice.Full"/>
+         
+    </classes>
+  </test> 
+</suite> 
