@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="str" value="color"/>
-  <parameter name="search" value="kids room curtains"/>
-  <parameter name="web" value="element"/>
-  <parameter name="brow" value="op"/>
+  <listeners>
+    <listener class-name="org.test4.FaliedAll"/>
+  </listeners>
   <test name="Test(failed)">
-    <parameter name="str" value="color"/>
-    <parameter name="search" value="kids room curtains"/>
-    <parameter name="web" value="element"/>
-    <parameter name="brow" value="op"/>
-    <groups>
-      <run>
-        <include name="regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="practice.Limeroad">
+      <class name="org.test4.Rerun">
         <methods>
-          <include name="addtocart" invocation-numbers="0"/>
+          <include name="ending"/>
+          <include name="check"/>
+          <include name="launch"/>
+          <include name="start"/>
+          <include name="end"/>
         </methods>
-      </class> <!-- practice.Limeroad -->
+      </class> <!-- org.test4.Rerun -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

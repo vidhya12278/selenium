@@ -3,10 +3,10 @@ package org.test4;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class Failed implements IRetryAnalyzer {
+public class Failed implements IRetryAnalyzer 
+{
 
-	int min=0;
-	int max=3;
+	int min=0,max=3;
 	public boolean retry(ITestResult result) 
 	{
 		if(min<max)

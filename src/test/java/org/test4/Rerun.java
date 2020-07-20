@@ -14,48 +14,51 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Rerun
-{
+public class Rerun {
 	public WebDriver driver;
-	Date d ;
+	Date d;
+
 	@BeforeClass
 	private void launch() {
-		System.setProperty("webdriver.chrome.driver","C:\\Testng\\drivers\\chromedriver.exe");
-		 driver = new ChromeDriver();
-		 driver.manage().window().maximize();
-		 //driver.get("https://demoqa.com/html-contact-form");
-}
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		// driver.get("https://demoqa.com/html-contact-form");
+	}
+
 	@BeforeMethod
 	private void start() {
 		d = new Date();
-		System.out.println("start time:" +d);
-		}
+		System.out.println("start time:" + d);
+	}
+
 	@Test
 	private void check() {
 		Assert.assertTrue(false);
 		System.out.println("checking");
-     }
+	}
+
 	@Test
-	private void table() 
-	{
+	private void table() {
 		driver.get("https://www.google.com/");
 		WebElement e = driver.findElement(By.xpath("//input[@title='Search']"));
 		e.sendKeys("painting for kids online");
 		driver.findElement(By.xpath("(//input[@value='Google Search'])[1]")).click();
-		
-	    driver.findElement(By.xpath("//h3[text()='Coloring online, painting games']")).click();
+
+		driver.findElement(By.xpath("//h3[text()='Coloring online, painting games']")).click();
 		driver.findElement(By.xpath("//a[text()='Christmas']")).click();
 	}
+	
 	@AfterMethod
 	private void ending() {
-     d = new Date();
-	System.out.println("end time:" +d);
-}
+		d = new Date();
+		System.out.println("end time:" + d);
+	}
+
 	@AfterClass
 	private void end() {
 		System.out.println("close");
 
 	}
-	
 
 }
